@@ -93,6 +93,7 @@ public class searcher
     	for (ScoreDoc sd : hits.scoreDocs)
         {
             Document d = searcher.doc(sd.doc);
+            
             System.out.println(String.format(d.get("id")));
         }
     }
