@@ -21,7 +21,7 @@ import org.apache.lucene.util.Version;
 
 public class indexer {
 	
-	private static String DOC_DIR = "C:\\Users\\Samrat\\Desktop\\AIR_5\\IR-Assignment5\\testDir";
+	private static String DOC_DIR = "C:\\Users\\Samrat\\Desktop\\AIR_5\\IR-Assignment5\\docs";
 	private static String INDEX_DIR = "C:\\Users\\Samrat\\Desktop\\AIR_5\\IR-Assignment5\\index";
 	
 	public indexer() throws IOException {
@@ -66,7 +66,7 @@ public class indexer {
 	public Document getDocument(Integer docNum,String Title,String Year,String Director,String Cast,String Genre,String Notes) {
 		Document doc = new Document();
 //		Field senderField = new Field("sender",Title,Field.Store.YES,Field.Index.NOT_ANALYZED);
-		System.out.println(docNum+Title+Year+Director+Cast+Genre+Notes);
+//		System.out.println(docNum+Title+Year+Director+Cast+Genre+Notes);
 		doc.add(new StringField("id", docNum.toString() , Field.Store.YES));
 		doc.add(new TextField("Title", Title , Field.Store.YES));
 		doc.add(new StringField("Year", Year , Field.Store.YES));
