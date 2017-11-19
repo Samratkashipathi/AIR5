@@ -94,13 +94,13 @@ public class searcher
         for (ScoreDoc sd : foundDocs.scoreDocs)
         {
             Document d = searcher.doc(sd.doc);
-            System.out.println(String.format(d.get("id")));
+            System.out.println("Id: "+String.format(d.get("id")));
             System.out.println("Title: "+String.format(d.get("Title")));
-            System.out.println(String.format(d.get("Year")));
-            System.out.println(String.format(d.get("Director")));
-            System.out.println(String.format(d.get("Cast")));
-            System.out.println(String.format(d.get("Genre")));
-            System.out.println(String.format(d.get("Notes")));
+            System.out.println("Year: "+String.format(d.get("Year")));
+            System.out.println("Director: "+String.format(d.get("Director")));
+            System.out.println("Cast: "+String.format(d.get("Cast")));
+            System.out.println("Genre: "+String.format(d.get("Genre")));
+            System.out.println("Notes: "+String.format(d.get("Notes")));
         }
         System.out.println("\n");
     }
